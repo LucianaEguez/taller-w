@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char nota;
+    cout<<"ingrese la nota:";
+    cin>>nota;
+    if(nota=='A'){ 
+        cout<<"la nota es excelente";
+    }
+    else if(nota=='B'){
+        cout<<"la nota es buena";
+    }
+    else if(nota=='C'){
+        cout<<"la nota no es muy buena";
+    }
+    else if(nota=='D'){
+         cout<<"esta reprobado";
+    }
+    return 0;
+}
