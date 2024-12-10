@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string texto;
+    cout << "Introduce una cadena de texto: ";
+    getline(cin, texto);
+    string textoInvertido = "";
+    int longitud = texto.length();
+    for (int i = longitud - 1; i >= 0; i--) {
+        textoInvertido += texto[i];  
+    }
+
+    int contadorVocales = 0;
+    for (char c : texto) {
+        c = (c >= 'A' && c <= 'Z') ? c + 32 : c;  
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            contadorVocales++;
+        }
+    }
+    cout << "Cadena invertida: " << textoInvertido << endl;
+    cout << "Cantidad de vocales: " << contadorVocales << endl;
+
+    return 0;
+}
